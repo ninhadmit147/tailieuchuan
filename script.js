@@ -146,4 +146,31 @@
 
     statNumbers.forEach((el) => io.observe(el));
   }
+
+  /* Daily progress micro-proof */
+  const teacherProgress = $("#teacherProgress");
+  const offerProgressFill = $("#offerProgressFill");
+  const recentSignup = $("#recentSignup");
+  if (teacherProgress) {
+    const KEY = "dgnl-teacher-progress";
+    let value = sessionStorage.getItem(KEY);
+    if (!value) {
+      value = String(80 + Math.floor(Math.random() * 6));
+      sessionStorage.setItem(KEY, value);
+    }
+    teacherProgress.textContent = `${value}%`;
+    if (offerProgressFill) {
+      offerProgressFill.style.width = `${value}%`;
+    }
+  }
+
+  if (recentSignup) {
+    const KEY = "dgnl-recent-signup";
+    let value = sessionStorage.getItem(KEY);
+    if (!value) {
+      value = String(9 + Math.floor(Math.random() * 7));
+      sessionStorage.setItem(KEY, value);
+    }
+    recentSignup.textContent = value;
+  }
 })();

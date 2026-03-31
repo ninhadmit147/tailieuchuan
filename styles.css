@@ -1512,7 +1512,19 @@ a {
 }
 
 .hero-list-check li {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
   color: var(--text-body);
+}
+
+.hero-list-check {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding-left: 0;
 }
 
 .btn-cta-yellow {
@@ -1605,6 +1617,9 @@ a {
 
 .hero-li-ico {
   color: var(--green);
+  line-height: 1;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
 }
 
 .stats-strip--light {
